@@ -25,7 +25,7 @@ SECRET_KEY = '%l*=76l*$px(dpd$n=!7_4b+_$h$kku@e*(r)n5-95k8!xc*uf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['task-manager-calendar.herokuapp.com','https://task-manager-calendar.herokuapp.com/']
+ALLOWED_HOSTS = ['task-manager-calendar.herokuapp.com','https://task-manager-calendar.herokuapp.com/','127.0.0.1','localhost']
 
 
 # Application definition
