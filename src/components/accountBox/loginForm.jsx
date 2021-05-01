@@ -23,7 +23,7 @@ export function LoginForm(props) {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [backendError, setBackendError] = useState(ReactSession.get("name"))
+  const [backendError, setBackendError] = useState("");
 
   const handleSubmit = () => {
     setBackendError("");

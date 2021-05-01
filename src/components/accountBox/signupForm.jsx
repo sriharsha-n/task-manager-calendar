@@ -17,7 +17,7 @@ export function SignupForm(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
-  const [backendError, setBackendError] = useState(ReactSession.get("name"))
+  const [backendError, setBackendError] = useState("");
 
 
   const handleSubmit = () => {
