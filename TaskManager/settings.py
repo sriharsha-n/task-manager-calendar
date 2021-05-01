@@ -54,7 +54,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000'
+     'http://localhost:3000',
+     'https://task-manager-calendar.herokuapp.com'
 ]
 
 ROOT_URLCONF = 'TaskManager.urls'
