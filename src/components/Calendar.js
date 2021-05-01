@@ -17,11 +17,7 @@ function Calendar(){
         { title: "Event Now", start: new Date()},
         { title: "Event Now", start: new Date() }
     ])
-    const [dateTasks, setDateTasks] = useState([
-      {id:"1", name: "Event Now", date: "31-03-2021", status:"InProgress", description:"This is my desc" },
-      {id:"2", name: "Done Now", date: "31-03-2021", status:"Done", description:"This is my desc" },
-      {id:"3", name: "Todo Now", date: "31-03-2021", status:"ToDo", description:"This is my desc" },
-    ]);
+    const [dateTasks, setDateTasks] = useState([]);
     let date=new Date();
     date=date.getFullYear()+"-"+(date.getMonth()+1)+"-"+(date.getDate());
     const [selectedDate, setselectedDate] = useState(date);
