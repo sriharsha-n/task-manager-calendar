@@ -17,6 +17,7 @@ export function SignupForm(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
+  const [backendError, setBackendError] = useState(ReactSession.get("name"))
 
 
   const handleSubmit = () => {
@@ -27,9 +28,11 @@ export function SignupForm(props) {
     })
     .then((res) => {
       console.log(res);
+      setBackendError("Registered Successfuly.");
     })
     .catch((err) => {
       console.log(err);
+      setBackendError(err.response.data.message);
     })
     setFullname("");
     setPassword("");
@@ -46,6 +49,7 @@ export function SignupForm(props) {
         <Input type="password" placeholder="Confirm Password" value={cpassword} onChange={(e) => setCpassword(e.target.value)} />
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
+      <p style={{color:"red"}}>{backendError}</p>
       <SubmitButton type="submit" onClick={handleSubmit}>Signup</SubmitButton>
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
