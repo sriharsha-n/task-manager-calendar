@@ -74,7 +74,7 @@ function AddTask({props}) {
             enqueueSnackbar('Some Error Occured!', { variantdanger });
             console.log(err);
             // alert(err.response.data.message);
-            setBackendError(err.response.data.message);
+            setBackendError(err['errors']);
           })
       }
       setTask("");

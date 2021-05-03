@@ -7,5 +7,6 @@ urlpatterns=[
     path('tasks/',UserTasks.as_view()),
     path('tasks/<str:date>/',UserDateTasks.as_view()),
     path('create-user/',CreateUser.as_view()),
-    path('login/',Login.as_view())
+    path('login/',Login.as_view()),
+    path('is-logged-in/',checkLogin.as_view()),
 ]

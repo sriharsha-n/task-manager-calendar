@@ -6,6 +6,13 @@ import bcrypt
 from .validators import checkStrongPassword
 from rest_framework.views import APIView
 
+class checkLogin(APIView):
+    def get(self,request):
+        if "id" in request.session:
+            return Response({"message":True})
+        return Response({"message":False})
+
+
 class NewTask(generics.ListCreateAPIView):
     serializer_class=TaskSerializer
     queryset=Task.objects.all()
