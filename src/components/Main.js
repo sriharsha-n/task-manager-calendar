@@ -13,7 +13,9 @@ function Main() {
             <Route exact path="/"  > 
                 {ReactSession.get("name") ? <Redirect to="/tasks" />: <Login /> }
             </Route>
-            <Route path="/tasks" component={Calendar} />
+            <Route path="/tasks" component={Calendar} > 
+              {ReactSession.get("name") ? <Calendar /> : <Redirect to="/" /> }
+            </Route>
         </Switch>
     </Router>
   );
