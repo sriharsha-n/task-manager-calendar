@@ -35,6 +35,7 @@ export function LoginForm(props) {
         console.log(res.data);
         ReactSession.set("name", res.data.name);
         history.push("/tasks");
+        history.go();
     })
     .catch((err) => {
       setBackendError(err.response.data.message);

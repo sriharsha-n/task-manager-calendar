@@ -9,8 +9,8 @@ from rest_framework.views import APIView
 class checkLogin(APIView):
     def get(self,request):
         if "id" in request.session:
-            return Response({"message":True})
-        return Response({"message":False})
+            return Response({"message":"true"})
+        return Response({"message":"false"})
 
 
 class NewTask(generics.ListCreateAPIView):
